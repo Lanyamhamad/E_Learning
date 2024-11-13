@@ -38,6 +38,29 @@ class _LandingState extends State<Landing>{
           fontSize: 18.0, 
           fontWeight: FontWeight.w500)
           ),
+        SizedBox(height: 90.0,),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Container(
+              padding: EdgeInsets.only(left: 30.0, top: 10.0,bottom: 10.0 ,right: 20.0),
+              decoration: BoxDecoration(color: Color(0xFFFFCC3F), borderRadius: BorderRadius.only(topLeft: Radius.circular(20), bottomLeft: Radius.circular(20))),
+              child: Row(
+                children: [
+                  Text(
+                  "Next",
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 22.0, 
+                      fontWeight: FontWeight.w500),            
+                  ),
+                  SizedBox(width: 20.0,),
+                  Icon(Icons.arrow_forward_ios)
+                ],
+              ),
+            ),
+          ],
+        )
      
      
       ],),),
