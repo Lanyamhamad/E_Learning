@@ -17,9 +17,12 @@ class _LandingState extends State<Landing>{
           crossAxisAlignment: CrossAxisAlignment.start,   //to stick them in the left
           children: [
       Image.asset("images/landingpages.jpg"),
+
       SizedBox(
         height: 30.0,
       ),
+
+      
       Text(
         "Order your\nfavourites Book",
         style: TextStyle(
