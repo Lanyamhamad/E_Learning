@@ -12,7 +12,7 @@ class _HomeState extends State<Home>{
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: EdgeInsets.only(top:50.0 ,left: 20.0,right: 20.0),
+        padding: EdgeInsets.only(top:50.0 ,left: 20.0),
         child: Column(children: [
         Row(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -26,7 +26,7 @@ class _HomeState extends State<Home>{
                   Image.asset("images/wave.png",height: 30,width: 30, fit: BoxFit.cover,),
                   SizedBox(width: 10.0,),
                   Text(
-                    "Hey Alex,",
+                    "Hey Emma,",
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 24.0, 
@@ -46,19 +46,23 @@ class _HomeState extends State<Home>{
 
             ],
           ),
-            ClipRRect(
-              borderRadius: BorderRadius.circular(10),
-              child: Image.asset(
-                "images/user.png", 
-                height: 60,
-                width: 60, 
-                fit: BoxFit.cover,),
+            Padding(
+              padding: const EdgeInsets.only(right: 20.0),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(10),
+                child: Image.asset(
+                  "images/user.png", 
+                  height: 60,
+                  width: 60, 
+                  fit: BoxFit.cover,),
+              ),
             )
         ],
         ),
         SizedBox(height: 20.0),
         Container(
-          padding: EdgeInsets.only(left: 20.0, bottom: 5.0, top: 5.0),
+          margin: EdgeInsets.only(right: 20.0),
+          padding: EdgeInsets.only(left: 20.0, bottom: 3.0, top: 3.0),
           width: MediaQuery.of(context).size.width,
           decoration: BoxDecoration(
             color: Color(0xfff5f5f5),
@@ -83,21 +87,105 @@ class _HomeState extends State<Home>{
                     fontWeight: FontWeight.bold
                     )
             ),
-            Text(
-                  "See all",
-                  style: TextStyle(
-                    color: Colors.black54,
-                    fontSize: 18.0, 
-                    fontWeight: FontWeight.bold
-                    )
+            Padding(
+              padding: const EdgeInsets.only(right: 20.0),
+              child: Text(
+                    "See all",
+                    style: TextStyle(
+                      color: Colors.black54,
+                      fontSize: 18.0, 
+                      fontWeight: FontWeight.bold
+                      )
+              ),
             )
           ],
-        )
+        ),
+        SizedBox(height: 20.0,),
+        Container(
+        height: 275,
+          child: ListView(
+            scrollDirection: Axis.horizontal,
+            children: [
+              Container(
+                padding: EdgeInsets.only(top: 10.0, left: 20.0),
+                decoration: BoxDecoration(color: Color(0xffffe08e), borderRadius: BorderRadius.circular(30)),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                  Text(
+                    "Book",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20.0, 
+                      fontWeight: FontWeight.bold
+                      )
+                  ),
+                  Text(
+                    "\$2.99 each",
+                    style: TextStyle(
+                      color: Colors.black54,
+                      fontSize: 18.0, 
+                      fontWeight: FontWeight.bold
+                      )
+                  ),
 
+                  SizedBox(height: 10.0),
+                  Image.asset("images/1.png", height: 130, width: 130, fit: BoxFit.cover,),
+                  SizedBox(height: 20.0),
+                
+                      Container(
+                        padding: EdgeInsets.all(10),
+                        margin: EdgeInsets.only(left: 130.0),
+                        decoration: BoxDecoration(color: Color(0xFFFFEAB5), borderRadius: BorderRadius.only(bottomRight: Radius.circular(30), topLeft: Radius.circular(20))),
+                        child: Icon(Icons.add, color: Colors.orange, size: 30,),
+                      )
+                    ],             
+                ),                
+              ),
+              //from this 
+              SizedBox(width: 20.0),
+              Container(
+                padding: EdgeInsets.only(top: 10.0, left: 20.0),
+                decoration: BoxDecoration(color: Color(0xffffe08e), borderRadius: BorderRadius.circular(30)),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                  Text(
+                    "Book",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20.0, 
+                      fontWeight: FontWeight.bold
+                      )
+                  ),
+                  Text(
+                    "\$2.99 each",
+                    style: TextStyle(
+                      color: Colors.black54,
+                      fontSize: 18.0, 
+                      fontWeight: FontWeight.bold
+                      )
+                  ),
+
+                  SizedBox(height: 10.0),
+                  Image.asset("images/1.png", height: 130, width: 130, fit: BoxFit.cover,),
+                  SizedBox(height: 20.0),
+                
+                      Container(
+                        padding: EdgeInsets.all(10),
+                        margin: EdgeInsets.only(left: 130.0),
+                        decoration: BoxDecoration(color: Color(0xFFFFEAB5), borderRadius: BorderRadius.only(bottomRight: Radius.circular(30), topLeft: Radius.circular(20))),
+                        child: Icon(Icons.add, color: Colors.orange, size: 30,),
+                      )
+                    ],             
+                              ),                
+                            )    //to this
+            ],
+          ),
+        )
       ],
       )
       ),
-
     );
   }
 }
