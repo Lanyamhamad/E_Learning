@@ -1,3 +1,4 @@
+import 'package:book_store/pages/home.dart';
 import 'package:flutter/material.dart';
 
 class Landing extends StatefulWidget{
@@ -18,9 +19,7 @@ class _LandingState extends State<Landing>{
           children: [
       Image.asset("images/landingpages.jpg"),
 
-      SizedBox(
-        height: 30.0,
-      ),
+      SizedBox(height: 30.0,),
 
       
       Text(
@@ -29,11 +28,8 @@ class _LandingState extends State<Landing>{
           color: Colors.black,
           fontSize: 34.0, 
           fontWeight: FontWeight.bold)
-          ),
-      
-      SizedBox(
-        height: 10.0,
-      ),    
+          ), 
+      SizedBox(height: 10.0,),    
       Text(
         "Read new Book and try to be aware ",
         style: TextStyle(
@@ -45,21 +41,26 @@ class _LandingState extends State<Landing>{
         Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            Container(
-              padding: EdgeInsets.only(left: 30.0, top: 10.0,bottom: 10.0 ,right: 20.0),
-              decoration: BoxDecoration(color: Color(0xFFFFCC3F), borderRadius: BorderRadius.only(topLeft: Radius.circular(20), bottomLeft: Radius.circular(20))),
-              child: Row(
-                children: [
-                  Text(
-                  "Next",
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 22.0, 
-                      fontWeight: FontWeight.w500),            
-                  ),
-                  SizedBox(width: 20.0,),
-                  Icon(Icons.arrow_forward_ios)
-                ],
+            GestureDetector(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Home()));
+              },
+              child: Container(
+                padding: EdgeInsets.only(left: 30.0, top: 10.0,bottom: 10.0 ,right: 20.0),
+                decoration: BoxDecoration(color: Color(0xFFFFCC3F), borderRadius: BorderRadius.only(topLeft: Radius.circular(20), bottomLeft: Radius.circular(20))),
+                child: Row(
+                  children: [
+                    Text(
+                    "Next",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 22.0, 
+                        fontWeight: FontWeight.w500),            
+                    ),
+                    SizedBox(width: 20.0,),
+                    Icon(Icons.arrow_forward_ios)
+                  ],
+                ),
               ),
             ),
           ],

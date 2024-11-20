@@ -1,3 +1,4 @@
+import 'package:book_store/pages/detail.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget{
@@ -133,14 +134,20 @@ class _HomeState extends State<Home>{
                     ),
         
                     SizedBox(height: 10.0),
-                    Image.asset("images/1.png", height: 130, width: 130, fit: BoxFit.cover,),
+                    Image.asset("images/html.png", height: 130, width: 130, fit: BoxFit.cover,),
                     SizedBox(height: 20.0),
                   
-                        Container(
-                          padding: EdgeInsets.all(10),
-                          margin: EdgeInsets.only(left: 130.0),
-                          decoration: BoxDecoration(color: Color(0xFFFFEAB5), borderRadius: BorderRadius.only(bottomRight: Radius.circular(30), topLeft: Radius.circular(20))),
-                          child: Icon(Icons.add, color: Colors.orange, size: 30,),
+                        GestureDetector(
+                          onTap: () {
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=>Detail()));
+
+                          },
+                          child: Container(
+                            padding: EdgeInsets.all(10),
+                            margin: EdgeInsets.only(left: 130.0),
+                            decoration: BoxDecoration(color: Color(0xFFFFEAB5), borderRadius: BorderRadius.only(bottomRight: Radius.circular(30), topLeft: Radius.circular(20))),
+                            child: Icon(Icons.add, color: Colors.orange, size: 30,),
+                          ),
                         )
                       ],             
                   ),                
@@ -171,7 +178,7 @@ class _HomeState extends State<Home>{
                     ),
         
                     SizedBox(height: 10.0),
-                    Image.asset("images/1.png", height: 130, width: 130, fit: BoxFit.cover,),
+                    Image.asset("images/css.png", height: 130, width: 130, fit: BoxFit.cover,),
                     SizedBox(height: 20.0),
                   
                         Container(
